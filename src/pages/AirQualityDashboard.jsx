@@ -49,7 +49,7 @@ export default function AirQualityDashboard() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-white bg-[#121826] min-h-screen">
-      <Card className={`${bgColor} text-black col-span-1`}>
+      <Card className={${bgColor} text-black col-span-1}>
         <CardContent className="p-6">
           <div className="text-6xl mb-2">{data.emoji}</div>
           <div className="text-lg font-semibold mb-2">Air quality</div>
