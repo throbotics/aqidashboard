@@ -49,7 +49,7 @@ export default function AirQualityDashboard() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-white bg-[#121826] min-h-screen">
-      <Card className={`${bgColor} text-black col-span-1`}>
+      <Card className={${bgColor} text-black col-span-1}>
         <CardContent className="p-6">
           <div className="text-6xl mb-2">{data.emoji}</div>
           <div className="text-lg font-semibold mb-2">Air quality</div>
@@ -64,7 +64,7 @@ export default function AirQualityDashboard() {
                 <Tooltip />
                 <Bar dataKey="aqi">
                   {hourly.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
+                    <Cell key={cell-${index}} fill={entry.color} />
                   ))}
                 </Bar>
               </BarChart>
@@ -98,7 +98,7 @@ function Metric({ label, value, color = "white" }) {
   return (
     <div>
       <div className="text-sm text-gray-400">{label}</div>
-      <div className={`text-2xl font-semibold ${colorMap[color]}`}>{value}</div>
+      <div className={text-2xl font-semibold ${colorMap[color]}}>{value}</div>
     </div>
   );
 }
