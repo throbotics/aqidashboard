@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent } from "../components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
 
 export default function AirQualityDashboard() {
@@ -51,6 +51,7 @@ export default function AirQualityDashboard() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-white bg-[#121826] min-h-screen">
       <Card className={`${bgColor} text-black col-span-1`}>
         <CardContent className="p-6">
+          <div className="text-sm font-semibold mb-2">IQAir Thailand - Vibhavadi 22</div>
           <div className="text-6xl mb-2">{data.emoji}</div>
           <div className="text-lg font-semibold mb-2">Air quality</div>
           <div className="text-5xl font-bold mb-1">{data.level}</div>
@@ -73,7 +74,7 @@ export default function AirQualityDashboard() {
         </CardContent>
       </Card>
 
-      <Card className="bg-[#1F2937] col-span-2">
+      <Card className="bg-gray-900 text-white col-span-2">
         <CardContent className="p-6 grid grid-cols-2 md:grid-cols-3 gap-6">
           <Metric label="PM2.5 µg/m³" value={data.pm2_5} color="yellow" />
           <Metric label="PM10 µg/m³" value={data.pm10} color="green" />
